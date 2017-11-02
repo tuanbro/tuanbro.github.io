@@ -60,17 +60,17 @@
             </md-input-container>
         </div>
 
-        <md-card md-whiteframe="6" style="width:300px; height: 200px">
-            <img ng-src="img/thumb/doclap.jpg" class="md-card-image" style="height: 100px; width: auto">
+        <md-card md-whiteframe="6" style="max-width:300px; height: auto">
+            <img ng-src="img/thumb/doclap.jpg" class="md-card-image" style="max-height: 80px; width: auto">
             <div layout-padding>
                 <div layout="column">
-                    <span class="md-headline">Doc Lap building</span>
+                    <span layout-fill class="md-headline">Doc Lap building</span>
                 </div>
-                <div>
-                    <span class="md-subhead">A historical place</span>
+                <div layout="row">
+                    <span layout-fill class="md-subhead">Historical place</span>
                     <div layout="row" layout-align="end center">
                         <md-button class="md-fab md-mini md-primary">
-                            <md-tooltip md-direction="left">Go</md-tooltip>
+                            <md-tooltip md-direction="down">Go</md-tooltip>
                             <md-icon style="color: white" aria-label="Menu" class="material-icons">navigate_next
                             </md-icon>
                         </md-button>
