@@ -13,4 +13,21 @@ For TMA LAB Tour
 <h1>Implementation</h1></br>
 <ul>
 <li>data.js - </li>
-...
+<li>...</li>
+</ul>
+<h1>Demo walk script</h1></br>
+(All photos in img/photo)
+<ul>
+    <li>0 -> 0_0 -> 1
+        <ul>
+            <li>1_0
+                <ul>
+                    <li>1_2</li>
+                    <li>1_3</li>
+                    <li>1_4</li>
+                </ul>
+            </li>
+            <li>1_1</li>
+        </ul>
+    </li>
+</ul>
