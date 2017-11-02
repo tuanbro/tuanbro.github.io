@@ -28,10 +28,11 @@
 
 </head>
 <body ng-controller="AppCtrl" ng-app="App" ng-cloak>
-<md-toolbar style="min-height: 35px; position:fixed;" ng-style="{background: '#00A1E4'}" layout="column" md-whiteframe="8">
-    <div style="height: 35px" layout="row" layout-align="start center" id="content">
+<md-toolbar style="min-height: 35px; position:fixed;" ng-style="{background: '#00A1E4'}" layout="column"
+            md-whiteframe="8">
+    <div style="height: 35px" layout="row" layout-align="start center">
 
-        <md-button  class="md-icon-button" aria-label="Settings">
+        <md-button class="md-icon-button" aria-label="Settings">
             <md-icon style="color: white" aria-label="Menu" class="material-icons">home</md-icon>
         </md-button>
 
@@ -39,19 +40,19 @@
             <md-icon style="color: white" aria-label="Menu" class="material-icons">stars</md-icon>
         </md-button>
 
-        <md-button ng-click="clickSearch=!clickSearch" class="md-icon-button" aria-label="More">
+        <md-button ng-click="searchBarVis=!searchBarVis" class="md-icon-button" aria-label="More">
             <md-icon style="color: white" aria-label="Menu" class="material-icons">search</md-icon>
         </md-button>
 
         <h2 align="center" flex>TMA lab tour</h2>
 
-        <md-button ng-click="clickSearch=!clickSearch" class="md-icon-button" aria-label="More">
+        <md-button ng-click="" class="md-icon-button" aria-label="More">
             <md-icon style="color: white" aria-label="Menu" class="material-icons">info</md-icon>
         </md-button>
 
     </div>
 
-    <md-content layout="row" layout-align="start center" ng-hide="!clickSearch" layout-padding>
+    <md-content layout="row" layout-align="start center" ng-hide="!searchBarVis" layout-padding>
         <div>
             <md-input-container>
                 <label>Search</label>
@@ -59,41 +60,28 @@
             </md-input-container>
         </div>
 
-        <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">Card with image</span>
-                    <span class="md-subhead">Small</span>
-                </md-card-title-text>
-                <md-card-title-media>
-                    <div class="md-media-sm card-media"></div>
-                </md-card-title-media>
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button>Action 1</md-button>
-                <md-button>Action 2</md-button>
-            </md-card-actions>
-        </md-card>
+        <md-card md-whiteframe="6" style="width:300px; height: 200px">
+            <img ng-src="img/thumb/doclap.jpg" class="md-card-image" style="height: 100px; width: auto">
+            <div layout-padding>
+                <div layout="column">
+                    <span class="md-headline">Doc Lap building</span>
+                </div>
+                <div>
+                    <span class="md-subhead">A historical place</span>
+                    <div layout="row" layout-align="end center">
+                        <md-button class="md-fab md-mini md-primary">
+                            <md-tooltip md-direction="left">Go</md-tooltip>
+                            <md-icon style="color: white" aria-label="Menu" class="material-icons">navigate_next
+                            </md-icon>
+                        </md-button>
+                    </div>
 
-        <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">Card with image</span>
-                    <span class="md-subhead">Small</span>
-                </md-card-title-text>
-                <md-card-title-media>
-                    <div class="md-media-sm card-media"></div>
-                </md-card-title-media>
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button>Action 1</md-button>
-                <md-button>Action 2</md-button>
-            </md-card-actions>
-        </md-card>
+                </div>
 
+            </div>
+        </md-card>
     </md-content>
 </md-toolbar>
-
 
 
 <a-scene>
