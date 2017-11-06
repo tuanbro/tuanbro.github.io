@@ -3,7 +3,7 @@ let data={
         id: "0",
         name: "Home",
         thumb: "https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg",
-        srcImg: "img/photo/city.jpg",
+        srcImg: "https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg",
 		audio: "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
         initView: {
             x: "0",
@@ -48,7 +48,7 @@ let data={
         id: "1",
         name: "Scene 1",
         thumb: "https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg",
-        srcImg: "img/photo/0_0.jpg",
+        srcImg: "https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg",
         initView: {
             x: "0",
             y: "-1",
@@ -110,7 +110,7 @@ let data={
         id: "2",
         name: "Scene 2",
         thumb: "https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg",
-        srcImg: "img/photo/1.jpg",
+        srcImg: "https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg",
         initView: {
             x: "0",
             y: "-1",
