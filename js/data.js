@@ -181,7 +181,7 @@ function createScene(index){
 	let scene = new Scene(choiceScene.name);
 	
 	let assets = new Assets("assets");
-		let img1 = new Img("img1","anonymous",choiceScene.srcImg);	
+		let img1 = new Img("img"+choiceScene.name,"anonymous",choiceScene.srcImg);	
 		let thumb1 = new Img("","anonymous",choiceScene.thumb);
 		let audio = new Audio("click-sound","anonymous",choiceScene.audio);
 		let scriptLink = new Script("link");
@@ -208,11 +208,13 @@ function createScene(index){
 		for (let i=0 ; i < spots.length ; i++){
 			let nextScene = data.scene[spots[i].toScn];
 			let thumb = new Img("thumb"+i,"anonymous",nextScene.thumb);
+			let imgScene = new Img("img"+i,"anonymous",nextScene.srcImg);
 			let linkSpot = new Entity("");
 				linkSpot.addProperty("template","src: #link");
 				linkSpot.addProperty("data-src",spots[i].toScn);
 				linkSpot.addProperty("data-thumb","#" + thumb.id);
 			assets.addChild(thumb);
+			assets.addChild(imgScene);
 			hotSpots.addChild(linkSpot);
 		}
 				  
