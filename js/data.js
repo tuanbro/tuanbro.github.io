@@ -221,7 +221,7 @@ function createScene(index) {
     
     let linkOther = new Entity("links2");
     linkOther.addProperty("class","link1");
-    linkOther.addProperty("position","0 -1 -4"");
+    linkOther.addProperty("position","0 -1 -4");
     linkOther.addProperty("rotation","-6 -1 -4");
     linkOther.addProperty("set-image","on: click; target: #image-360; src: #place");
     
