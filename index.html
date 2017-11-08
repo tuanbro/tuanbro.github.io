@@ -21,9 +21,9 @@
     <script src="vendor/js/aframe-event-set-component.min.js"></script>
     <script src="vendor/js/aframe-layout-component.min.js"></script>
     <script src="vendor/js/aframe-template-component.min.js"></script>
-	
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
     <script src="js/set-image.js"></script>
     <script src="js/app.js"></script>
     <script src="js/classes.js"></script>
@@ -32,7 +32,7 @@
 
 </head>
 <body id="putScene" ng-controller="AppCtrl" ng-app="App" ng-cloak>
-<md-toolbar style="min-height: 35px; position:fixed;" ng-style="{background: '#00A1E4'}" layout="column"
+<md-toolbar id="toolbar" style="min-height: 35px; position:fixed;" ng-style="{background: '#00A1E4'}" layout="column"
             md-whiteframe="8">
     <div style="height: 35px" layout="row" layout-align="start center">
 
@@ -79,9 +79,7 @@
                             </md-icon>
                         </md-button>
                     </div>
-
                 </div>
-
             </div>
         </md-card>
     </md-content>
