@@ -2,7 +2,7 @@ let data = {
     scene: [{
         id: "0",
         name: "Home",
-        thumb: "https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg",
+        thumb: "img/icon/info.png",
         srcImg: "img/photo/0.jpg",
         audio: "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
         initView: {
@@ -213,11 +213,24 @@ function createScene(index) {
         linkSpot.addProperty("template", "src: #link");
         linkSpot.addProperty("data-src", spots[i].toScn);
         linkSpot.addProperty("data-thumb", "#" + thumb.id);
+ 
         assets.addChild(thumb);
         assets.addChild(imgScene);
         hotSpots.addChild(linkSpot);
     }
-
+    
+    let linkOther = new Entity("links2");
+    linkOther.addProperty("class","link1");
+    linkOther.addProperty("position","0 -1 -4"");
+    linkOther.addProperty("rotation","-6 -1 -4");
+    linkOther.addProperty("set-image","on: click; target: #image-360; src: #place");
+    
+    let img32 = new AImage("tesjl");
+    img32.addProperty("src","#bluecute");
+    let imgSrc123 = new Img("bluecute");
+    imgSrc123.addProperty("src","/img/icon/info.png");
+    linkOther.addChild(img32);
+    
     let camera = new Entity("");
     camera.addProperty("camera", "");
     camera.addProperty("look-controls", "");
@@ -227,7 +240,7 @@ function createScene(index) {
     cursor.addProperty("event-set__1", "_event: mouseenter; color: springgreen");
     cursor.addProperty("event-set__2", "_event: mouseleave; color: black");
     cursor.addProperty("fuse", "true");
-    cursor.addProperty("raycaster", "objects: .link");
+    cursor.addProperty("raycaster", "objects: .link;.link1");
 
     camera.addChild(cursor);
     assets.addChild(img1);
@@ -237,6 +250,7 @@ function createScene(index) {
     scene.addChild(assets);
     scene.addChild(sky360);
     scene.addChild(hotSpots);
+    scene.addChild(linkOther);
     scene.addChild(camera);
 
     document.getElementsByTagName("title").innerHTML = scene.id;

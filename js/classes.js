@@ -125,6 +125,13 @@ class Script extends Entity {
     }
 }
 
+class AImage extends Entity {
+    constructor(id) {
+        super(id);
+        this._type = "a-image";
+    }
+}
+
 class TemplateLink extends Entity {
     constructor(id) {
         super(id);
