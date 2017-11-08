@@ -15,18 +15,18 @@ AFRAME.registerComponent('set-image', {
     init: function () {
         var data = this.data;
         var el = this.el;
-        
+
         this.setupFadeAnimation();
 
         el.addEventListener(data.on, function () {
-		   // Fade out image.
-			  data.target.emit('set-image-fade');
-			  // Wait for fade to complete.
-			  setTimeout(function () {
-				// Set image.
-				//data.target.setAttribute('material', 'src', data.src);
-				createScene(data.src);
-			  }, data.dur);
+            // Fade out image.
+            data.target.emit('set-image-fade');
+            // Wait for fade to complete.
+            setTimeout(function () {
+                // Set image.
+                //data.target.setAttribute('material', 'src', data.src);
+                createScene(data.src);
+            }, data.dur);
         });
     },
 
@@ -38,7 +38,9 @@ AFRAME.registerComponent('set-image', {
         var targetEl = this.data.target;
 
         // Only set up once.
-        if (targetEl.dataset.setImageFadeSetup) { return; }
+        if (targetEl.dataset.setImageFadeSetup) {
+            return;
+        }
         targetEl.dataset.setImageFadeSetup = true;
 
         // Create animation.
