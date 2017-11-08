@@ -1,0 +1,181 @@
+{
+  "scene": [
+    {
+      "id": "0",
+      "name": "Home",
+      "thumb": "img/icon/info.png",
+      "srcImg": "img/photo/0.jpg",
+      "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
+      "initView": {
+        "x": "0",
+        "y": "-1",
+        "z": "-4"
+      },
+      "roboSpot": {
+        "pos": {
+          "x": "",
+          "y": "",
+          "z": ""
+        }
+      },
+      "hotSpot": [
+        {
+          "id": "0",
+          "toScn": "1",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "nxtView": {
+            "x": "",
+            "y": "",
+            "z": ""
+          }
+        }
+      ],
+      "infoPot": [
+        {
+          "id": "0",
+          "audio": "mp3.ogg",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "text": "",
+          "img": "",
+          "video": ""
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "name": "Scene 1",
+      "thumb": "https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg",
+      "srcImg": "img/photo/0_0.jpg",
+      "initView": {
+        "x": "0",
+        "y": "-1",
+        "z": "-4"
+      },
+      "roboSpot": {
+        "pos": {
+          "x": "",
+          "y": "",
+          "z": ""
+        }
+      },
+      "hotSpot": [
+        {
+          "id": "0",
+          "toScn": "0",
+          "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "nxtView": {
+            "x": "",
+            "y": "",
+            "z": ""
+          }
+        },
+        {
+          "id": "1",
+          "toScn": "2",
+          "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "nxtView": {
+            "x": "",
+            "y": "",
+            "z": ""
+          }
+        }
+      ],
+      "infoPot": [
+        {
+          "id": "0",
+          "audio": "mp3.ogg",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "text": "",
+          "img": "",
+          "video": ""
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Scene 2",
+      "thumb": "https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg",
+      "srcImg": "img/photo/1.jpg",
+      "initView": {
+        "x": "0",
+        "y": "-1",
+        "z": "-4"
+      },
+      "roboSpot": {
+        "pos": {
+          "x": "",
+          "y": "",
+          "z": ""
+        }
+      },
+      "hotSpot": [
+        {
+          "id": "0",
+          "toScn": "1",
+          "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "nxtView": {
+            "x": "",
+            "y": "",
+            "z": ""
+          }
+        },
+        {
+          "id": "1",
+          "toScn": "0",
+          "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "nxtView": {
+            "x": "",
+            "y": "",
+            "z": ""
+          }
+        }
+      ],
+      "infoPot": [
+        {
+          "id": "0",
+          "audio": "mp3.ogg",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "text": "",
+          "img": "",
+          "video": ""
+        }
+      ]
+    }
+  ]
+}

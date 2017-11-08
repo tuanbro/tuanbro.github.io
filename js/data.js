@@ -1,175 +1,7 @@
-let data = {
-    scene: [{
-        id: "0",
-        name: "Home",
-        thumb: "img/icon/info.png",
-        srcImg: "img/photo/0.jpg",
-        audio: "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
-        initView: {
-            x: "0",
-            y: "-1",
-            z: "-4"
-        },
-        roboSpot: {
-            pos: {
-                x: "",
-                y: "",
-                z: ""
-            }
-        },
-        hotSpot: [{
-            id: "0",
-            toScn: "1",
-            pos: {
-                x: "",
-                y: "",
-                z: ""
-            },
-            nxtView: {
-                x: "",
-                y: "",
-                z: ""
-            }
-        }],
-        infoPot: [{
-            id: "0",
-            audio: "mp3.ogg",
-            pos: {
-                x: "",
-                y: "",
-                z: ""
-            },
-            text: "",
-            img: "",
-            video: ""
-        }]
-    },
-        {
-            id: "1",
-            name: "Scene 1",
-            thumb: "https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg",
-            srcImg: "img/photo/0_0.jpg",
-            initView: {
-                x: "0",
-                y: "-1",
-                z: "-4"
-            },
-            roboSpot: {
-                pos: {
-                    x: "",
-                    y: "",
-                    z: ""
-                }
-            },
-            hotSpot: [
-                {
-                    id: "0",
-                    toScn: "0",
-                    audio: "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
-                    pos: {
-                        x: "",
-                        y: "",
-                        z: ""
-                    },
-                    nxtView: {
-                        x: "",
-                        y: "",
-                        z: ""
-                    }
-                },
-                {
-                    id: "1",
-                    toScn: "2",
-                    audio: "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
-                    pos: {
-                        x: "",
-                        y: "",
-                        z: ""
-                    },
-                    nxtView: {
-                        x: "",
-                        y: "",
-                        z: ""
-                    }
-                }
-            ],
-            infoPot: [{
-                id: "0",
-                audio: "mp3.ogg",
-                pos: {
-                    x: "",
-                    y: "",
-                    z: ""
-                },
-                text: "",
-                img: "",
-                video: ""
-            }]
-        },
-        {
-            id: "2",
-            name: "Scene 2",
-            thumb: "https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg",
-            srcImg: "img/photo/1.jpg",
-            initView: {
-                x: "0",
-                y: "-1",
-                z: "-4"
-            },
-            roboSpot: {
-                pos: {
-                    x: "",
-                    y: "",
-                    z: ""
-                }
-            },
-            hotSpot: [
-                {
-                    id: "0",
-                    toScn: "1",
-                    audio: "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
-                    pos: {
-                        x: "",
-                        y: "",
-                        z: ""
-                    },
-                    nxtView: {
-                        x: "",
-                        y: "",
-                        z: ""
-                    }
-                },
-                {
-                    id: "1",
-                    toScn: "0",
-                    audio: "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
-                    pos: {
-                        x: "",
-                        y: "",
-                        z: ""
-                    },
-                    nxtView: {
-                        x: "",
-                        y: "",
-                        z: ""
-                    }
-                }
-            ],
-            infoPot: [{
-                id: "0",
-                audio: "mp3.ogg",
-                pos: {
-                    x: "",
-                    y: "",
-                    z: ""
-                },
-                text: "",
-                img: "",
-                video: ""
-            }]
-        }
-    ]
-};
+var data;
+$.get('js/data.json', function (res) {
+    data = res;
+});
 /////////////////////////////////////////code/////////////////////////////////////////////////////////
 $("#putScene").ready(function () {
     createScene(0);
@@ -213,23 +45,23 @@ function createScene(index) {
         linkSpot.addProperty("template", "src: #link");
         linkSpot.addProperty("data-src", spots[i].toScn);
         linkSpot.addProperty("data-thumb", "#" + thumb.id);
- 
+
         assets.addChild(thumb);
         assets.addChild(imgScene);
         hotSpots.addChild(linkSpot);
     }
-    
+
     let linkOther = new Entity("links2");
-    linkOther.addProperty("class","link1");
-    linkOther.addProperty("position","-1.299 -0.814 -3.671");
-    linkOther.addProperty("set-image","on: click; target: #image-360; src: #place");
-    
+    linkOther.addProperty("class", "link1");
+    linkOther.addProperty("position", "-1.299 -0.814 -3.671");
+    linkOther.addProperty("set-image", "on: click; target: #image-360; src: #place");
+
     let img32 = new AImage("tesjl");
-    img32.addProperty("src","#bluecute");
+    img32.addProperty("src", "#bluecute");
     let imgSrc123 = new Img("bluecute");
-    imgSrc123.addProperty("src","/img/icon/info.png");
+    imgSrc123.addProperty("src", "/img/icon/info.png");
     linkOther.addChild(img32);
-    
+
     let camera = new Entity("");
     camera.addProperty("camera", "");
     camera.addProperty("look-controls", "");
