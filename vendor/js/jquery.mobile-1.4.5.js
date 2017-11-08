@@ -1284,7 +1284,7 @@
                     data = element.getAttribute("data-" + $.mobile.ns + key);
                 }
 
-                // Copied from core's src/data.js:dataAttr()
+                // Copied from core's src/scene-gen.js:dataAttr()
                 // Convert from a string to a proper data type
                 try {
                     data = data === "true" ? true :

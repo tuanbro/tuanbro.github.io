@@ -12,7 +12,7 @@ For TMA LAB Tour
 </ul>
 <h1>Implementation</h1></br>
 <ul>
-<li>data.js - </li>
+<li>scene-gen.js - </li>
 <li>...</li>
 </ul>
 <h1>Demo walk script</h1></br>
