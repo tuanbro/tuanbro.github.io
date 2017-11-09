@@ -1,6 +1,7 @@
 var data;
 $.get('js/data.json', function (res) {
     data = res;
+    createScene(0);
 });
 // var data = {
 //   "scene": [
@@ -209,9 +210,9 @@ $.get('js/data.json', function (res) {
 //   ]
 // };
 /////////////////////////////////////////code/////////////////////////////////////////////////////////
-$("#putScene").ready(function () {
-    createScene(0);
-});
+// $("#putScene").ready(function () {
+//     createScene(0);
+// });
 
 function createTemplateLink(){
     let scriptLink = new Script("link");
