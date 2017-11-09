@@ -23,9 +23,14 @@
           "id": "0",
           "toScn": "1",
           "pos": {
-            "x": "",
-            "y": "",
-            "z": ""
+            "x": "5.580",
+            "y": "0.429",
+            "z": "-0.543"
+          },
+		  "rot": {
+            "x": "1.031",
+            "y": "-9.454",
+            "z": "1.261"
           },
           "nxtView": {
             "x": "",
@@ -72,9 +77,14 @@
           "toScn": "0",
           "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
           "pos": {
-            "x": "",
-            "y": "",
-            "z": ""
+            "x": "-9.072",
+            "y": "-1.677",
+            "z": "6.381"
+          },
+		  "rot": {
+            "x": "0.917",
+            "y": "110.180",
+            "z": "0.917"
           },
           "nxtView": {
             "x": "",
@@ -87,9 +97,14 @@
           "toScn": "2",
           "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
           "pos": {
-            "x": "",
-            "y": "",
-            "z": ""
+            "x": "-9.192",
+            "y": "2.937",
+            "z": "2.348"
+          },
+          "rot": {
+            "x": "3.151",
+            "y": "83.022",
+            "z": "-0.917"
           },
           "nxtView": {
             "x": "",
@@ -136,9 +151,14 @@
           "toScn": "1",
           "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
           "pos": {
-            "x": "",
-            "y": "",
-            "z": ""
+            "x": "-6.810",
+            "y": "1.488",
+            "z": "3.980"
+          },
+		  "rot": {
+            "x": "-1.604",
+            "y": "87.777",
+            "z": "2.005"
           },
           "nxtView": {
             "x": "",
@@ -151,9 +171,14 @@
           "toScn": "0",
           "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
           "pos": {
-            "x": "",
-            "y": "",
-            "z": ""
+            "x": "3.613",
+            "y": "1.199",
+            "z": "-4.163"
+          },
+		  "rot": {
+            "x": "-4.240",
+            "y": "-11.058",
+            "z": "-1.089"
           },
           "nxtView": {
             "x": "",

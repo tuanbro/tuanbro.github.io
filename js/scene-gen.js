@@ -7,15 +7,7 @@ $("#putScene").ready(function () {
     createScene(0);
 });
 
-function createScene(index) {
-    let choiceScene = data.scene[index];
-
-    let scene = new Scene(choiceScene.name);
-
-    let assets = new Assets("assets");
-    let img1 = new Img("img" + choiceScene.name, "anonymous", choiceScene.srcImg);
-    let thumb1 = new Img("", "anonymous", choiceScene.thumb);
-    let audio = new Audio("click-sound", "anonymous", choiceScene.audio);
+function createTemplateLink(){
     let scriptLink = new Script("link");
     scriptLink.addProperty("type", "text/html");
     let tempEntity = new TemplateLink("");
@@ -29,40 +21,16 @@ function createScene(index) {
     tempEntity.addProperty("sound", "on: click; src: #click-sound");
     tempEntity.setGeometry("plane", "1", "1");
     scriptLink.addChild(tempEntity);
-
-    let sky360 = new Sky("image-360");
+	return scriptLink;
+}
+function createSky(id){
+	let sky360 = new Sky("image-360");
     sky360.addProperty("radius", "10");
-    sky360.addProperty("src", '#' + img1.id);
-    let hotSpots = new Entity("links");
-    hotSpots.addProperty("layout", "type: line; margin: 1.5");
-    hotSpots.addProperty("position", choiceScene.initView.x + ' ' + choiceScene.initView.y + ' ' + choiceScene.initView.z);
-    let spots = choiceScene.hotSpot;
-    for (let i = 0; i < spots.length; i++) {
-        let nextScene = data.scene[spots[i].toScn];
-        let thumb = new Img("thumb" + i, "anonymous", nextScene.thumb);
-        let imgScene = new Img("img" + i, "anonymous", nextScene.srcImg);
-        let linkSpot = new Entity("");
-        linkSpot.addProperty("template", "src: #link");
-        linkSpot.addProperty("data-src", spots[i].toScn);
-        linkSpot.addProperty("data-thumb", "#" + thumb.id);
-
-        assets.addChild(thumb);
-        assets.addChild(imgScene);
-        hotSpots.addChild(linkSpot);
-    }
-
-    let linkOther = new Entity("links2");
-    linkOther.addProperty("class", "link1");
-    linkOther.addProperty("position", "-1.299 -0.814 -3.671");
-    linkOther.addProperty("set-image", "on: click; target: #image-360; src: #place");
-
-    let img32 = new AImage("tesjl");
-    img32.addProperty("src", "#bluecute");
-    let imgSrc123 = new Img("bluecute");
-    imgSrc123.addProperty("src", "/img/icon/info.png");
-    linkOther.addChild(img32);
-
-    let camera = new Entity("");
+    sky360.addProperty("src", '#' + id);
+	return sky360;
+}
+function createCamera(){
+	let camera = new Entity("");
     camera.addProperty("camera", "");
     camera.addProperty("look-controls", "");
     let cursor = new Cursor("cursor");
@@ -71,21 +39,63 @@ function createScene(index) {
     cursor.addProperty("event-set__1", "_event: mouseenter; color: springgreen");
     cursor.addProperty("event-set__2", "_event: mouseleave; color: black");
     cursor.addProperty("fuse", "true");
-    cursor.addProperty("raycaster", "objects: .link;.link1");
-
+    cursor.addProperty("raycaster", "objects: .link");
     camera.addChild(cursor);
+	return camera;
+}
+function getValOfPutScene(){
+	return document.getElementById("putScene").innerHTML;
+}
+function setValOfPutScene(val){
+	document.getElementById("putScene").innerHTML = val;
+}
+function createScene(index) {
+    let choiceScene = data.scene[index];
+    let assets = new Assets("assets");
+    let img1 = new Img("img" + choiceScene.name, "anonymous", choiceScene.srcImg);
+    let thumb1 = new Img("", "anonymous", choiceScene.thumb);
+    let audio = new Audio("click-sound", "anonymous", choiceScene.audio);
+	
+    let scriptLink = createTemplateLink();
+
+    let sky360 = createSky(img1.id);
+	
+	let camera = createCamera();
+	
+    let hotSpots = new Entity("links");
+    hotSpots.addProperty("position", choiceScene.initView.x + ' ' + choiceScene.initView.y + ' ' + choiceScene.initView.z);
+    let spots = choiceScene.hotSpot;
+    for (let i = 0; i < spots.length; i++) {
+        let nextScene = data.scene[spots[i].toScn];
+        let thumb = new Img("thumb" + i, "anonymous", nextScene.thumb);
+        let imgScene = new Img("img" + i, "anonymous", nextScene.srcImg);
+        let linkSpot = new Entity("");
+		linkSpot.addProperty("layout", "type: line; margin: 1.5");
+        linkSpot.addProperty("template", "src: #link");
+        linkSpot.addProperty("data-src", spots[i].toScn);
+        linkSpot.addProperty("data-thumb", "#" + thumb.id);
+		if (typeof spots[i].pos != 'undefined'){
+			linkSpot.addProperty("position", spots[i].pos.x+ ' ' + spots[i].pos.y + ' ' + spots[i].pos.z);
+		}
+		if (typeof spots[i].rot != 'undefined'){
+			linkSpot.addProperty("rotation", spots[i].rot.x+ ' ' + spots[i].rot.y + ' ' + spots[i].rot.z);
+		}
+        assets.addChild(thumb);
+        assets.addChild(imgScene);
+        hotSpots.addChild(linkSpot);
+    }
+	
+	// Add childs;
     assets.addChild(img1);
     assets.addChild(thumb1);
     assets.addChild(audio);
     assets.addChild(scriptLink);
-    scene.addChild(assets);
-    scene.addChild(sky360);
-    scene.addChild(hotSpots);
-    scene.addChild(linkOther);
-    scene.addChild(camera);
-
-    document.getElementsByTagName("title").innerHTML = scene.id;
-    document.getElementById("putScene").innerHTML = scene.write();
+	let scene = new Scene(choiceScene.name);
+	scene.addChild(assets);
+	scene.addChild(sky360);
+	scene.addChild(hotSpots);
+	scene.addChild(camera);
+	setValOfPutScene(scene.write());
 }
 
 
