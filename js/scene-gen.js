@@ -3,7 +3,6 @@ $.get('js/data.json', function (res) {
     data = res;
     createScene(0);
 });
-
 function createTemplateLink(){
     let scriptLink = new Script("link");
     scriptLink.addProperty("type", "text/html");
@@ -26,8 +25,11 @@ function createSky(id){
     sky360.addProperty("src", '#' + id);
 	return sky360;
 }
-function createCamera(){
+function createCamera(choiceScene){
 	let camera = new Entity("");
+	if(typeof choiceScene.rotView != 'undefined'){
+		camera.addProperty("rotation", choiceScene.rotView.x + ' ' + choiceScene.rotView.y + ' ' + choiceScene.rotView.z);
+	}
     camera.addProperty("camera", "");
     camera.addProperty("look-controls", "");
     let cursor = new Cursor("cursor");
@@ -57,7 +59,7 @@ function createScene(index) {
 
     let sky360 = createSky(img1.id);
 	
-	let camera = createCamera();
+	let camera = createCamera(choiceScene);
 	
     let hotSpots = new Entity("links");
     hotSpots.addProperty("position", choiceScene.initView.x + ' ' + choiceScene.initView.y + ' ' + choiceScene.initView.z);
@@ -87,12 +89,22 @@ function createScene(index) {
     assets.addChild(thumb1);
     assets.addChild(audio);
     assets.addChild(scriptLink);
-	let scene = new Scene(choiceScene.name);
-	scene.addChild(assets);
-	scene.addChild(sky360);
-	scene.addChild(hotSpots);
-	scene.addChild(camera);
-	setValOfPutScene(scene.write());
+	let oldScene = getValOfPutScene();
+	/* if (oldScene == ''){ */
+		let scene = new Scene(choiceScene.name);
+		scene.addChild(assets);
+		scene.addChild(sky360);
+		scene.addChild(hotSpots);
+		scene.addChild(camera);
+		setValOfPutScene(scene.write());
+	/* } else {
+		let newScene = assets.write() + sky360.write() + hotSpots.write() + camera.write();
+		let indexStr1 = oldScene.indexOf('a-assets');
+		let indexStr2 = oldScene.indexOf('canvas');
+		let str1 = oldScene.substring(0,indexStr1-1);
+		let str2 = oldScene.substring(indexStr2-1,oldScene.length);
+		setValOfPutScene(str1 + newScene + str2);
+	} */
 }
 
 
