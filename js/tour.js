@@ -3,7 +3,7 @@
 document.addEventListener( 'DOMContentLoaded' , function () {
   
 var data;
-$.get('js/data.json', function (res) {
+$.get('js/data2.json', function (res) {
     data = res;
     changeScene(0);
 });
