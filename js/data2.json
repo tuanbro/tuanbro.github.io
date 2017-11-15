@@ -1,0 +1,211 @@
+{
+  "scene": [
+    {
+      "id": "0",
+      "name": "Home",
+      "thumb": "img/icon/info.png",
+      "srcImg": "img/photo/0.jpg",
+      "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
+      "initView": {
+        "x": "23",
+        "y": "267",
+        "z": "0"
+      },
+      "roboSpot": {
+        "pos": {
+          "x": "",
+          "y": "",
+          "z": ""
+        }
+      },
+      "hotSpot": [
+        {
+          "id": "0",
+          "toScn": "1",
+          "pos": {
+            "x": "4.994",
+            "y": "-1.768",
+            "z": "13.190"
+          },
+		  "rot": {
+            "x": "-0.792",
+            "y": "12.079",
+            "z": "-26.986"
+          },
+          "nxtView": {
+            "x": "",
+            "y": "",
+            "z": ""
+          }
+        }
+      ],
+      "infoPot": [
+        {
+          "id": "0",
+          "audio": "mp3.ogg",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "text": "",
+          "img": "",
+          "video": ""
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "name": "Scene 1",
+      "thumb": "img/icon/info.png",
+      "srcImg": "img/photo/0_0.jpg",
+      "initView": {
+        "x": "0",
+        "y": "-1",
+        "z": "-4"
+      }, 
+	  "rotView": {
+        "x": "-12.225",
+        "y": "-13.481",
+        "z": "0"
+      },
+      "roboSpot": {
+        "pos": {
+          "x": "",
+          "y": "",
+          "z": ""
+        }
+      },
+      "hotSpot": [
+        {
+          "id": "0",
+          "toScn": "0",
+          "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
+          "pos": {
+            "x": "1.399",
+            "y": "-1.460",
+            "z": "-6.265"
+          },
+		  "rot": {
+            "x": "15.413",
+            "y": "58.556",
+            "z": "-1.891"
+          },
+          "nxtView": {
+            "x": "",
+            "y": "",
+            "z": ""
+          }
+        },
+        {
+          "id": "1",
+          "toScn": "2",
+          "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
+          "pos": {
+            "x": "4.964",
+            "y": "2.937",
+            "z": "-8.887"
+          },
+          "rot": {
+            "x": "3.151",
+            "y": "98.215",
+            "z": "-0.917"
+          },
+          "nxtView": {
+            "x": "",
+            "y": "",
+            "z": ""
+          }
+        }
+      ],
+      "infoPot": [
+        {
+          "id": "0",
+          "audio": "mp3.ogg",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "text": "",
+          "img": "",
+          "video": ""
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Scene 2",
+      "thumb": "img/icon/info.png",
+      "srcImg": "img/photo/1.jpg",
+      "initView": {
+        "x": "0",
+        "y": "-1",
+        "z": "-4"
+      },
+      "roboSpot": {
+        "pos": {
+          "x": "",
+          "y": "",
+          "z": ""
+        }
+      },
+      "hotSpot": [
+        {
+          "id": "0",
+          "toScn": "1",
+          "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
+          "pos": {
+            "x": "9.738",
+            "y": "0.128",
+            "z": "9.288"
+          },
+		  "rot": {
+            "x": "-1.604",
+            "y": "155.042",
+            "z": "2.005"
+          },
+          "nxtView": {
+            "x": "",
+            "y": "",
+            "z": ""
+          }
+        },
+        {
+          "id": "1",
+          "toScn": "0",
+          "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
+          "pos": {
+            "x": "3.613",
+            "y": "1.199",
+            "z": "-12.680"
+          },
+		  "rot": {
+            "x": "-4.240",
+            "y": "-11.058",
+            "z": "-1.089"
+          },
+          "nxtView": {
+            "x": "",
+            "y": "",
+            "z": ""
+          }
+        }
+      ],
+      "infoPot": [
+        {
+          "id": "0",
+          "audio": "mp3.ogg",
+          "pos": {
+            "x": "",
+            "y": "",
+            "z": ""
+          },
+          "text": "",
+          "img": "",
+          "video": ""
+        }
+      ]
+    }
+  ]
+}
