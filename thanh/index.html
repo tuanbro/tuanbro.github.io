@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TMA lab tour</title>
+    <meta name="description" content="360&deg; TMA lab tour">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/css/angular-material.css"/>
+    <link rel="stylesheet" href="css/mystyle.css"/>
+
+    <script src="vendor/js/aframe.min.js"></script>
+    <script src="vendor/js/aframe-animation-component.min.js"></script>
+    <script src="vendor/js/aframe-event-set-component.min.js"></script>
+    <script src="vendor/js/aframe-layout-component.min.js"></script>
+    <script src="vendor/js/aframe-template-component.min.js"></script>
+
+    <script src="vendor/js/jquery-3.2.1.js"></script>
+
+    <script src="vendor/js/angular.js"></script>
+    <script src="vendor/js/angular-animate.min.js"></script>
+    <script src="vendor/js/angular-route.min.js"></script>
+    <script src="vendor/js/angular-resource.min.js"></script>
+    <script src="vendor/js/angular-aria.min.js"></script>
+    <script src="vendor/js/angular-material.min.js"></script>
+
+    <script src="js/set-image.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/model.js"></script>
+    <!-- <script src="js/scene-gen.js"></script> -->
+    <script src="js/_tour.js"></script>
+</head>
+<body>
+<md-toolbar ng-controller="AppCtrl" ng-app="App" ng-cloak id="toolbar" style="min-height: 35px; position:fixed;"
+            ng-style="{background: '#00A1E4'}" layout="column"
+            md-whiteframe="8">
+    <div style="height: 35px" layout="row" layout-align="start center">
+
+        <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon style="color: white" aria-label="Menu" class="material-icons">home</md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="More">
+            <md-icon style="color: white" aria-label="Menu" class="material-icons">stars</md-icon>
+        </md-button>
+
+        <md-button ng-click="searchBarVis=!searchBarVis" class="md-icon-button" aria-label="More">
+            <md-icon style="color: white" aria-label="Menu" class="material-icons">search</md-icon>
+        </md-button>
+
+        <h2 align="center" flex>TMA lab tour</h2>
+
+        <md-button ng-click="" class="md-icon-button" aria-label="More">
+            <md-icon style="color: white" aria-label="Menu" class="material-icons">info</md-icon>
+        </md-button>
+
+    </div>
+
+    <md-content layout="row" layout-align="start center" ng-hide="!searchBarVis" layout-padding>
+        <div>
+            <md-input-container>
+                <label>Search</label>
+                <input ng-model="search">
+            </md-input-container>
+        </div>
+
+        <md-card md-whiteframe="6" style="max-width:300px; height: auto">
+            <img ng-src="img/thumb/doclap.jpg" class="md-card-image" style="max-height: 80px; width: auto">
+            <div layout-padding>
+                <div layout="column">
+                    <span layout-fill class="md-headline">Doc Lap building</span>
+                </div>
+                <div layout="row">
+                    <span layout-fill class="md-subhead">Historical place</span>
+                </div>
+            </div>
+        </md-card>
+    </md-content>
+</md-toolbar>
+
+
+
+<a-scene>
+      <a-assets> 
+      </a-assets>    
+
+ 
+      <a-entity id="hotSpotsGroup">   
+         <a-entity class="link">   
+             
+         </a-entity>
+      </a-entity>
+
+    
+      <a-sky id="sky-A" class="sky" position="0 0 0" rotation="0 -108 0" radius="15" model-opacity="1" src="" material="" scale="" visible="" geometry="">
+        <a-animation begin="cth-swap-out" easing="ease-in" attribute="model-opacity" fill="forwards" from="1" to="0" dur="1500"></a-animation>
+      </a-sky>
+
+      <a-sky id="sky-B" class="sky" position="0 0 0" rotation="0 -108 0" radius="16" model-opacity="1" src="" material="" scale="" visible="" geometry="">
+        <a-animation begin="cth-swap-out" easing="ease-in" attribute="model-opacity" fill="forwards" from="1" to="0" dur="1500"></a-animation>
+      </a-sky>
+
+
+      <a-entity id="mycamera" position="0 2 4" rotation="" camera look-controls>
+        <a-cursor id="cursor"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+          event-set__1="_event: mouseenter; color: springgreen"
+          event-set__2="_event: mouseleave; color: black"
+          fuse="true"
+          raycaster="objects: .link;"></a-cursor>
+      </a-entity>
+
+
+    </a-scene>
+
+
+</body>
+</html>

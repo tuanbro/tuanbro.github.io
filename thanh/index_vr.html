@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TMA LAB Tour</title>
+    <meta name="description" content="360&deg; TMA lab tour">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/css/angular-material.css"/>
+    <link rel="stylesheet" href="css/mystyle.css"/>
+
+    <script src="vendor/js/aframe.min.js"></script>
+    <script src="vendor/js/aframe-animation-component.min.js"></script>
+    <script src="vendor/js/aframe-event-set-component.min.js"></script>
+    <script src="vendor/js/aframe-layout-component.min.js"></script>
+    <script src="vendor/js/aframe-template-component.min.js"></script>
+
+    <script src="vendor/js/jquery-3.2.1.js"></script>
+    <!--script src="vendor/js/jquery.mobile-1.4.5.js"></script-->
+
+    <script src="vendor/js/angular.js"></script>
+    <script src="vendor/js/angular-animate.min.js"></script>
+    <script src="vendor/js/angular-route.min.js"></script>
+    <script src="vendor/js/angular-resource.min.js"></script>
+    <script src="vendor/js/angular-aria.min.js"></script>
+    <script src="vendor/js/angular-material.min.js"></script>
+
+    <script src="js/set-image.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/scene-gen.js"></script>
+
+
+</head>
+<body>
+    <a-scene>
+      <a-assets>
+        <img id="home" src="img/photo/home.jpg">
+        <img id="welcome" src="img/welcome/welcome.png">
+        <img id="start" src="img/welcome/start.png">
+        <img id="banner1" src="img/welcome/1.jpg">
+        <img id="banner2" src="img/welcome/2.jpg">
+        <img id="banner3" src="img/welcome/3.jpg">
+        <img id="banner4" src="img/welcome/4.jpg">
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: ${thumb}"
+            event-set__1="_event: mousedown; scale: 1 1 1"
+            event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+            event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+            event-set__4="_event: mouseleave; scale: 1 1 1"
+            set-image="on: click; target: #image-360; src: ${src}"
+            sound="on: click; src: #click-sound"></a-entity>
+        </script>
+      </a-assets>
+      <!------------------------------
+                WELCOME PAGE
+      ---------------------------------->
+      <a-entity id="home_page">
+          <!-- WELCOME -->
+          <a-curvedimage id="welcome-banner" src="#welcome" radius="5.7" theta-length="36" height="1"
+                         position="0 3.5 -1" opacity="0.7">
+            <a-animation attribute="rotation" from="0 10 0" to="0 162 0" delay="500"
+                         dur="1000"></a-animation>
+          </a-curvedimage>
+          <!-- END -->
+          <!-- START TOUR -->
+          <a-image id="start" src="#start"
+                              class="link" event-set__1="_event: mousedown; scale: 1 1 1"
+                                      event-set__2="_event: mouseup; scale: 1.1 1.1 1"
+                                      event-set__3="_event: mouseenter; scale: 1.1 1.1 1"
+                                      event-set__4="_event: mouseleave; scale: 1 1 1"
+                                      start-tour="on: click; target: #tour; hide_target: #home_page; src: #home">
+            <a-animation attribute="position" from="0 2.8 -6" to="0 2.25 -6" delay="1000"
+                         dur="1000"></a-animation>
+          </a-image>
+          <!-- END -->
+          <!-- BANNER -->
+          <a-curvedimage id="banner1" src="#banner1" radius="5.7"
+                         theta-length="18" position="0 1.5 0" height="0.5"
+                         class="link" event-set__1="_event: mousedown; scale: 1 1 1"
+                                      event-set__2="_event: mouseup; scale: 1.1 1.1 1"
+                                      event-set__3="_event: mouseenter; scale: 1.1 1.1 1"
+                                      event-set__4="_event: mouseleave; scale: 1 1 1"
+                                      show-image="on: click; target: #banner_img1; src: #banner1">
+            <a-animation attribute="rotation" from="0 100 0" to="0 142 0" delay="750"
+                         dur="1000"></a-animation>
+          </a-curvedimage>
+          <a-image id="banner_img1" scale="4 1 1" visible="true" position="0 1.5 -4.5"
+                                    class="link"
+                                    height="0"
+                                    width="0"
+                                    event-set__1="_event: mousedown; height: 0; width: 0"></a-image>
+          <a-curvedimage id="banner2" src="#banner2" radius="5.7"
+                         theta-length="18" position="0 1.5 0" height="0.5"
+                         class="link" event-set__1="_event: mousedown; scale: 1 1 1"
+                                      event-set__2="_event: mouseup; scale: 1.1 1.1 1"
+                                      event-set__3="_event: mouseenter; scale: 1.1 1.1 1"
+                                      event-set__4="_event: mouseleave; scale: 1 1 1"
+                                      show-image="on: click; target: #banner_img2; src: #banner2">
+            <a-animation attribute="rotation" from="0 250 0" to="0 182 0" delay="750"
+                         dur="1000"></a-animation>
+          </a-curvedimage>
+          <a-image id="banner_img2" scale="4 1 1" visible="true" position="0 1.5 -4.5"
+                                    class="link"
+                                    height="0"
+                                    width="0"
+                                    event-set__1="_event: mousedown; height: 0; width: 0"></a-image>
+          <a-curvedimage id="banner3" src="#banner3" radius="5.7"
+                         theta-length="18" position="0 1.5 0" height="0.5"
+                         class="link" event-set__1="_event: mousedown; scale: 1 1 1"
+                                      event-set__2="_event: mouseup; scale: 1.1 1.1 1"
+                                      event-set__3="_event: mouseenter; scale: 1.1 1.1 1"
+                                      event-set__4="_event: mouseleave; scale: 1 1 1"
+                                      show-image="on: click; target: #banner_img3; src: #banner3">
+            <a-animation attribute="rotation" from="0 100 0" to="0 162 0" delay="750"
+                         dur="1000"></a-animation>
+          </a-curvedimage>
+          <a-image id="banner_img3" scale="4 1 1" visible="true" position="0 1.5 -4.5"
+                                    class="link"
+                                    height="0"
+                                    width="0"
+                                    event-set__1="_event: mousedown; height: 0; width: 0"></a-image>
+          <a-curvedimage id="banner4" src="#banner4" radius="5.7"
+                         theta-length="18" position="0 1.5 0" height="0.5"
+                         class="link" event-set__1="_event: mousedown; scale: 1 1 1"
+                                      event-set__2="_event: mouseup; scale: 1.1 1.1 1"
+                                      event-set__3="_event: mouseenter; scale: 1.1 1.1 1"
+                                      event-set__4="_event: mouseleave; scale: 1 1 1"
+                                      show-image="on: click; target: #banner_img4; src: #banner4">
+            <a-animation attribute="rotation" from="0 250 0" to="0 202 0" delay="750"
+                         dur="1000"></a-animation>
+          </a-curvedimage>
+          <a-image id="banner_img4" scale="4 1 1" visible="true" position="0 1.5 -4.5"
+                                    class="link"
+                                    height="0"
+                                    width="0"
+                                    event-set__1="_event: mousedown; height: 0; width: 0"></a-image>
+          <!-- END -->
+      </a-entity>
+      <!---------------------
+                END 
+      ----------------------->
+      <!-- SKY -->
+      <a-sky id="tour" color="#2CB3FB"></a-sky>
+      <!-- END -->
+      <!-- CAMERA -->
+      <a-entity camera="zoom: 1;" look-controls="reverseMouseDrag: true" position="0 0 0" rotation="0 0 0" scale="" visible="">
+          <a-entity position="0 0 -3.455" scale="1 1 1" cursor="fuse: true; fuseTimeout: 1500" geometry="primitive: circle; radius: 0.05;" material="color: white; shader: flat; opacity: 0.6;" raycaster="objects: .link; recursive: true; interval: 250;" rotation="" visible="">
+            <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" dur="1500" to="0.7 0.7 0.7"></a-animation>
+            <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.7 0.7 0.7" dur="250" to="1 1 1"></a-animation>
+          </a-entity>
+      </a-entity>
+      <!-- END -->
+    </a-scene>
+</body>
+</html>
