@@ -37,21 +37,25 @@
             md-whiteframe="8">
     <div style="height: 35px" layout="row" layout-align="start center">
 
-        <md-button class="md-icon-button" aria-label="Settings">
+        <md-button ng-init="a = -1" md-whiteframe={{a}} ng-mouseenter="a = 8" ng-mouseleave="a = -1"
+                   class="md-icon-button" aria-label="Settings">
             <md-icon style="color: white" aria-label="Menu" class="material-icons">home</md-icon>
         </md-button>
 
-        <md-button class="md-icon-button" aria-label="More">
+        <md-button ng-init="b = -1" md-whiteframe={{b}} ng-mouseenter="b = 8" ng-mouseleave="b = -1"
+                   class="md-icon-button" aria-label="More">
             <md-icon style="color: white" aria-label="Menu" class="material-icons">stars</md-icon>
         </md-button>
 
-        <md-button ng-click="searchBarVis=!searchBarVis" class="md-icon-button" aria-label="More">
+        <md-button ng-init="c = -1" md-whiteframe={{c}} ng-mouseenter="c = 8" ng-mouseleave="c = -1"
+                   ng-click="searchBarVis=!searchBarVis;" class="md-icon-button" aria-label="More">
             <md-icon style="color: white" aria-label="Menu" class="material-icons">search</md-icon>
         </md-button>
 
         <h2 align="center" flex>TMA lab tour</h2>
 
-        <md-button ng-click="" class="md-icon-button" aria-label="More">
+        <md-button ng-init="d = -1" md-whiteframe={{d}} ng-mouseenter="d = 8" ng-mouseleave="d = -1" ng-click=""
+                   class="md-icon-button" aria-label="More">
             <md-icon style="color: white" aria-label="Menu" class="material-icons">info</md-icon>
         </md-button>
 
@@ -65,11 +69,13 @@
             </md-input-container>
         </div>
 
-        <md-card ng-repeat="i in searchRes" md-whiteframe="6" style="max-width:300px; height: auto">
+        <md-card ng-click="click(i)" ng-repeat="i in searchRes" md-whiteframe="{{cardwhiteframe}}"
+                 style="max-width:300px; height: auto" ng-mouseenter="cardwhiteframe = 10"
+                 ng-mouseleave="cardwhiteframe = 3" ng-mousedown="cardwhiteframe = 3" ng-mouseup="cardwhiteframe = 10">
             <img ng-src="{{i.thumb}}" class="md-card-image" style="max-height: 80px; width: auto">
             <div layout-padding>
                 <div layout="column">
-                    <span layout-fill class="md-headline">{{i.name}}</span>
+                    <span layout-fill>{{i.name}}</span>
                 </div>
             </div>
     </md-content>
