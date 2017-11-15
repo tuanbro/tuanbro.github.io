@@ -61,21 +61,17 @@
         <div>
             <md-input-container>
                 <label>Search</label>
-                <input ng-model="search">
+                <input ng-model="searchtext">
             </md-input-container>
         </div>
 
-        <md-card md-whiteframe="6" style="max-width:300px; height: auto">
-            <img ng-src="img/thumb/doclap.jpg" class="md-card-image" style="max-height: 80px; width: auto">
+        <md-card ng-repeat="i in searchRes" md-whiteframe="6" style="max-width:300px; height: auto">
+            <img ng-src="{{i.thumb}}" class="md-card-image" style="max-height: 80px; width: auto">
             <div layout-padding>
                 <div layout="column">
-                    <span layout-fill class="md-headline">Doc Lap building</span>
-                </div>
-                <div layout="row">
-                    <span layout-fill class="md-subhead">Historical place</span>
+                    <span layout-fill class="md-headline">{{i.name}}</span>
                 </div>
             </div>
-        </md-card>
     </md-content>
 </md-toolbar>
 <code id="putScene"></code>
