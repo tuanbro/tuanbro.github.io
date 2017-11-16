@@ -5,7 +5,7 @@ app.controller('AppCtrl', function ($scope, $http, $resource, $filter) {
     $scope.btnWhiteframe = "-1";
     $scope.searchRes = [];
     $scope.searchBarVis = false;
-    $resource('js/data2.json').get().$promise.then(function (data) {
+    $resource('js/data.json').get().$promise.then(function (data) {
         $scope.data = data;
         console.log($scope.data.scene);
         $scope.search = function () {
@@ -36,8 +36,11 @@ app.controller('AppCtrl', function ($scope, $http, $resource, $filter) {
               item1.setAttribute('src', value.src);
               item1.setAttribute('crossorigin', 'anonymous');
               assets.appendChild(item1);
-            document.getElementById( 'sky-A' ).setAttribute( 'src', '#p' + value.id );
-            document.getElementById( 'sky-B' ).setAttribute( 'src', '#p' + value.id );
+            var outer = document.getElementById( window.skyes.outer );
+            var outerMaterial = Object.assign( {}, outer.getAttribute( 'material' ) );
+            outerMaterial.src = '#p' + value.id;
+            outer.setAttribute( 'material', outerMaterial );
+            window.skyes._id = value.id;
             // console.log(value);
         }
     });
