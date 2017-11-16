@@ -7,8 +7,8 @@
       "srcImg": "img/photo/0.jpg",
       "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
       "initView": {
-        "x": "23",
-        "y": "267",
+        "x": "3",
+        "y": "1",
         "z": "0"
       },
       "roboSpot": {
@@ -23,14 +23,14 @@
           "id": "0",
           "toScn": "1",
           "pos": {
-            "x": "4.994",
-            "y": "-1.768",
-            "z": "13.190"
+            "x": "3.715",
+            "y": "-5.100",
+            "z": "11.924"
           },
-		  "rot": {
-            "x": "-0.792",
-            "y": "12.079",
-            "z": "-26.986"
+		      "rot": {
+            "x": "-6.016",
+            "y": "35.867",
+            "z": "-1.318"
           },
           "nxtView": {
             "x": "",
@@ -58,7 +58,7 @@
       "id": "1",
       "name": "Scene 1",
       "thumb": "img/icon/info.png",
-      "srcImg": "img/photo/0_0.jpg",
+      "srcImg": "img/photo/1.jpg",
       "initView": {
         "x": "0",
         "y": "-1",
@@ -82,14 +82,14 @@
           "toScn": "0",
           "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
           "pos": {
-            "x": "1.399",
-            "y": "-1.460",
-            "z": "-6.265"
+            "x": "-1.340",
+            "y": "-9.673",
+            "z": "-10.369"
           },
 		  "rot": {
-            "x": "15.413",
-            "y": "58.556",
-            "z": "-1.891"
+            "x": "14.496",
+            "y": "159.511",
+            "z": "12.032"
           },
           "nxtView": {
             "x": "",
@@ -102,14 +102,14 @@
           "toScn": "2",
           "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
           "pos": {
-            "x": "4.964",
-            "y": "2.937",
-            "z": "-8.887"
+            "x": "6.940",
+            "y": "-0.982",
+            "z": "-13.243"
           },
           "rot": {
-            "x": "3.151",
-            "y": "98.215",
-            "z": "-0.917"
+            "x": "-40.966",
+            "y": "164.553",
+            "z": "2.177"
           },
           "nxtView": {
             "x": "",
@@ -137,11 +137,11 @@
       "id": "2",
       "name": "Scene 2",
       "thumb": "img/icon/info.png",
-      "srcImg": "img/photo/1.jpg",
+      "srcImg": "img/photo/2.jpg",
       "initView": {
-        "x": "0",
-        "y": "-1",
-        "z": "-4"
+        "x": "-7.678",
+        "y": "-130.259",
+        "z": "-4.000"
       },
       "roboSpot": {
         "pos": {
@@ -156,14 +156,14 @@
           "toScn": "1",
           "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
           "pos": {
-            "x": "9.738",
-            "y": "0.128",
-            "z": "9.288"
+            "x": "8.643",
+            "y": "-0.138",
+            "z": "10.346"
           },
 		  "rot": {
-            "x": "-1.604",
-            "y": "155.042",
-            "z": "2.005"
+            "x": "21.028",
+            "y": "83.480",
+            "z": "-81.417"
           },
           "nxtView": {
             "x": "",
@@ -177,12 +177,12 @@
           "audio": "https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg",
           "pos": {
             "x": "3.613",
-            "y": "1.199",
-            "z": "-12.680"
+            "y": "-6.880",
+            "z": "-11.472"
           },
 		  "rot": {
             "x": "-4.240",
-            "y": "-11.058",
+            "y": "136.536",
             "z": "-1.089"
           },
           "nxtView": {

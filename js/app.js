@@ -5,7 +5,7 @@ app.controller('AppCtrl', function ($scope, $http, $resource, $filter) {
     $scope.btnWhiteframe = "-1";
     $scope.searchRes = [];
     $scope.searchBarVis = false;
-    $resource('js/data.json').get().$promise.then(function (data) {
+    $resource('js/data2.json').get().$promise.then(function (data) {
         $scope.data = data;
         console.log($scope.data.scene);
         $scope.search = function () {
@@ -15,7 +15,8 @@ app.controller('AppCtrl', function ($scope, $http, $resource, $filter) {
                     $scope.searchRes.push({
                         id: value.id,
                         name: value.name,
-                        thumb: value.thumb
+                        thumb: value.thumb,
+                        src: value.srcImg
                     });
                 }
             });
@@ -29,7 +30,15 @@ app.controller('AppCtrl', function ($scope, $http, $resource, $filter) {
 
 
         $scope.click = function (value) {
-            console.log(value);
+            var assets = document.querySelector('a-assets');
+            var item1 = document.createElement("img");
+              item1.setAttribute('id', 'p' + value.id);
+              item1.setAttribute('src', value.src);
+              item1.setAttribute('crossorigin', 'anonymous');
+              assets.appendChild(item1);
+            document.getElementById( 'sky-A' ).setAttribute( 'src', '#p' + value.id );
+            document.getElementById( 'sky-B' ).setAttribute( 'src', '#p' + value.id );
+            // console.log(value);
         }
     });
 
