@@ -24,7 +24,6 @@
 
     <!-- <script src="js/set-image.js"></script> -->
     <script src="js/app.js"></script>
-    <script src="js/model.js"></script>
     <script src="js/tour2.js"></script>
     
 
@@ -204,8 +203,7 @@
 -->
         <a-entity id="cth-camera" camera="zoom: 1;" look-controls="reverseMouseDrag: false" position="0 0 0" rotation="0 0 0" scale="" visible="">
           <a-entity position="0 0 -3.455" scale="1 1 1" cursor="fuse: true; fuseTimeout: 1500" geometry="primitive: circle; radius: 0.05;" material="color: white; shader: flat; opacity: 0.6;" raycaster="objects: #marker-wrapper .markers .link; recursive: true; interval: 250;" rotation="" visible="">
-            <a-animatio
-            n begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" dur="1500" to="0.7 0.7 0.7"></a-animation>
+            <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" dur="1500" to="0.7 0.7 0.7"></a-animation>
             <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.7 0.7 0.7" dur="250" to="1 1 1"></a-animation>
           </a-entity>
         </a-entity>
